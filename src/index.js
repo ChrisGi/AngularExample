@@ -1,10 +1,12 @@
 var angular = require('angular');
 
-var hello = require('./app/hello');
+var main = require('./app/main');
+var album = require('./app/album/album');
+var artist = require('./app/artist/artist');
 require('angular-ui-router');
 var routesConfig = require('./routes');
 
-require('./index.css');
+require('./styles.css');
 
 var app = 'app';
 module.exports = app;
@@ -12,4 +14,6 @@ module.exports = app;
 angular
   .module(app, ['ui.router'])
   .config(routesConfig)
-  .component('app', hello);
+  .component('app', main)
+  .component('album', album)
+  .component('artist', artist);
