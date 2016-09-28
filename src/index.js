@@ -8,6 +8,8 @@ var routesConfig = require('./routes');
 
 require('./styles.css');
 
+var header = require('./app/header/header');
+
 var app = 'app';
 module.exports = app;
 
@@ -16,4 +18,5 @@ angular
   .config(routesConfig)
   .component('app', main)
   .component('album', album)
+  .component('searchHeader', header)
   .component('artist', artist);
