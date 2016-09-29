@@ -1,3 +1,5 @@
-module.exports = {
-  template: require('./album.html')
-};
+(function () {
+  module.exports = {
+    template: require('./album.html')
+  };
+})();
