@@ -4,7 +4,7 @@
   var main = require('./app/main/main');
   var album = require('./app/album/album');
   var artist = require('./app/artist/artist');
-  var albumService = require('./app/album/albumservice');
+  var albumService = require('./app/album/album.service');
   require('angular-ui-router');
   var routesConfig = require('./routes');
 

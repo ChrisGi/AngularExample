@@ -2,30 +2,14 @@
 <html>
 <head>
   <title>Acodemy spotify</title>
-
-  <!-- dependencies -->
-  <!-- bower:css -->
-  <link rel="stylesheet" href="../bower/normalize.css/normalize.css">
-  <link rel="stylesheet" href="../bower/font-awesome/css/font-awesome.css">
-  <!-- endinject -->
-
-  <!-- app styling -->
-  <!-- inject:css -->
-  <link rel="stylesheet" href="../styles.css">
-  <!-- endinject -->
-
-  <!-- webcomponents -->
-  <!-- webcomponents:html -->
-
-  <!-- Web component imports go here! -->
-
-  <!-- endinject -->
 </head>
 <body>
 
   <header class="page-header">
     <aside>
-      <div class="thumb-l"></div>
+      <div class="thumb-l">
+        <img ng-src="{{ al.album.image }}">
+      </div>
 
       <ul class="thumbs-list">
         <li>
@@ -39,7 +23,7 @@
 
     <section>
       <header>
-        <h1>Album</h1>
+        <h1>Album: {{al.album.name}}</h1>
         <h2>2014</h2>
       </header>
 
