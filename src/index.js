@@ -1,16 +1,17 @@
 (function () {
   var angular = require('angular');
 
+  var header = require('./app/header/header');
   var main = require('./app/main/main');
   var album = require('./app/album/album');
   var artist = require('./app/artist/artist');
+  var track = require('./app/track/track');
   var albumService = require('./app/album/album.service');
+  var tracksService = require('./app/track/track.service');
   require('angular-ui-router');
   var routesConfig = require('./routes');
 
   require('./styles.css');
-
-  var header = require('./app/header/header');
 
   var app = 'app';
   module.exports = app;
@@ -22,5 +23,7 @@
     .component('album', album)
     .component('searchHeader', header)
     .component('artist', artist)
-    .factory('albumservice', albumService);
+    .component('tracks', track)
+    .factory('albumservice', albumService)
+    .factory('tracksservice', tracksService);
 })();
