@@ -1,18 +1,19 @@
 (function () {
   module.exports = AlbumController;
 
-  AlbumController.$inject = ['$q', 'albumservice', '$log'];
+  AlbumController.$inject = ['$q', 'albumservice', 'artistservice', '$log'];
 
   /** @ngInject */
-  function AlbumController($q, albumservice, $log) {
+  function AlbumController($q, albumservice, artistservice, $log) {
     var vm = this;
     vm.album = {};
     vm.albums = [];
+    vm.artist = {};
 
     activate();
 
     function activate() {
-      var promises = [getAlbums(), getAlbum(0)];
+      var promises = [getAlbums(), getAlbum(0), getArtist()];
       return $q.all(promises).then(
         function () {
           // success
@@ -33,6 +34,14 @@
         .then(function (data) {
           vm.albums = data;
           return vm.albums;
+        });
+    }
+
+    function getArtist() {
+      artistservice.getArtist()
+        .then(function (a) {
+          vm.artist = a;
+          return vm.artist;
         });
     }
   }

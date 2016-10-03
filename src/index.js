@@ -8,6 +8,8 @@
   var track = require('./app/track/track');
   var albumService = require('./app/album/album.service');
   var tracksService = require('./app/track/track.service');
+  var artistService = require('./app/artist/artist.service');
+
   require('angular-ui-router');
   var routesConfig = require('./routes');
 
@@ -25,5 +27,6 @@
     .component('artist', artist)
     .component('tracks', track)
     .factory('albumservice', albumService)
-    .factory('tracksservice', tracksService);
+    .factory('tracksservice', tracksService)
+    .factory('artistservice', artistService);
 })();
