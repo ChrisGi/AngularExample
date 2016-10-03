@@ -14,8 +14,10 @@
       <ul class="thumbs-list">
         <li>
           <a ui-sref="artist">
-            <div class="thumb-s"></div>
-            <p>Artist</p>
+            <div class="thumb-s">
+              <img ng-src="{{al.artist.images[2].url}}">
+            </div>
+            <p>{{al.artist.name}}</p>
           </a>
         </li>
       </ul>
@@ -33,21 +35,6 @@
       </section>
     </section>
   </header>
-
-
-  <!-- dependencies -->
-  <!-- bower:js -->
-  <script src="../bower/angular/angular.js"></script>
-  <script src="../bower/angular-route/angular-route.js"></script>
-  <script src="../bower/webcomponentsjs/webcomponents.js"></script>
-  <!-- endinject -->
-
-  <!-- app logic -->
-  <!-- inject:js -->
-
-  <!-- app scripts go here! -->
-
-  <!-- endinject -->
 </body>
 </html>
 

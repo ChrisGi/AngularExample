@@ -4,69 +4,26 @@
   <title>Acodemy spotify</title>
 </head>
 <body>
+<search-header></search-header>
+<header class="page-header">
+  <aside>
+    <div class="thumb-l">
+      <img ng-src="{{ art.artist.images[1].url }}">
+    </div>
+  </aside>
 
-  <header class="page-header">
-    <aside>
-      <div class="thumb-l">
-        <img ng-src="{{ art.album.image }}">
-      </div>
-    </aside>
+  <section>
+    <header>
+      <h1>{{ art.artist.name }}</h1>
+      <h2>{{ art.artist.followers.total }} followers</h2>
+    </header>
 
-    <section>
-      <header>
-        <h1>Artist {{ art.album.name }}</h1>
-        <h2>124 followers</h2>
-      </header>
-
-      <section class="table-section">
-        <header><h1>Top tracks</h1></header>
-        <tracks></tracks>
-      </section>
+    <section class="table-section">
+      <header><h1>Top tracks</h1></header>
+      <tracks></tracks>
     </section>
-  </header>
-
-  <section class="tiles-section">
-    <header>
-      <h1>Albums</h1>
-      <h2>5 found</h2>
-    </header>
-    <div class="tiles-container">
-      <a href="../album/album.html" class="tile thumb-m" title="Album"></a>
-      <a href="../album/album.html" class="tile thumb-m" title="Album"></a>
-      <a href="../album/album.html" class="tile thumb-m" title="Album"></a>
-      <a href="../album/album.html" class="tile thumb-m" title="Album"></a>
-      <a href="../album/album.html" class="tile thumb-m" title="Album"></a>
-    </div>
   </section>
-
-  <section class="tiles-section">
-    <header>
-      <h1>Related artists</h1>
-    </header>
-    <div class="tiles-container">
-      <a class="tile thumb-m" title="Artist"></a>
-      <a class="tile thumb-m" title="Artist"></a>
-      <a class="tile thumb-m" title="Artist"></a>
-      <a class="tile thumb-m" title="Artist"></a>
-      <a class="tile thumb-m" title="Artist"></a>
-    </div>
-  </section>
-
-
-
-  <!-- dependencies -->
-  <!-- bower:js -->
-  <script src="../bower/angular/angular.js"></script>
-  <script src="../bower/angular-route/angular-route.js"></script>
-  <script src="../bower/webcomponentsjs/webcomponents.js"></script>
-  <!-- endinject -->
-
-  <!-- app logic -->
-  <!-- inject:js -->
-
-  <!-- app scripts go here! -->
-
-  <!-- endinject -->
+</header>
 </body>
 </html>
 
