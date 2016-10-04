@@ -1,12 +1,12 @@
 <nav class="app-navbar initialized minimized">
   <div class="app-logo">
     <a href="../index.html">
-      <i class="fa fa-spotify"></i> Spotify browser
+      <i class="fa fa-spotify"></i> {{hc.title}}
     </a>
   </div>
   <div class="app-search">
     <input type="text"
-           placeholder="search..." >
+           placeholder="search..." ng-click="hc.search()">
     <button type="button"
             class="input-clear"
             tabindex="-1">
