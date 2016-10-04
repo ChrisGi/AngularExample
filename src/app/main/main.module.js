@@ -3,8 +3,7 @@
   var mainComponent = require('./main.component');
 
   angular
-    .module('app.main', [
-      'app.core'])
+    .module('app.main', [])
     .config(stateConfig)
-    .component('main-page', mainComponent);
+    .component('app', mainComponent);
 })();

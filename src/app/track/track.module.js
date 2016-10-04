@@ -1,12 +1,9 @@
 (function () {
-  var angular = require('angular');
-
   var trackComponent = require('./track.component');
+  var trackService = require('./track.service');
 
   angular
-    .module('app.track', [
-      'app.core',
-      'app.header'
-    ])
-    .component('track', trackComponent);
+    .module('app.track', [])
+    .component('tracks', trackComponent)
+    .factory('tracksservice', trackService);
 })();

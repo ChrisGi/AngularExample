@@ -6,9 +6,9 @@
   /* eslint no-unused-vars: ["error", { "args": "none" }] */
   function StateConfig($stateProvider, $urlRouterProvider) {
     $stateProvider
-      .state('app', {
-        url: '/',
-        component: 'app'
+      .state('artist', {
+        url: '/artist',
+        component: 'artist'
       });
   }
 })();

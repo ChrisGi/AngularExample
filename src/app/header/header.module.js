@@ -2,8 +2,6 @@
   var headerComponent = require('./header.component');
 
   angular
-    .module('app.header', [
-      'app.core'
-    ])
-    .component('header', headerComponent);
+    .module('app.header', [])
+    .component('searchHeader', headerComponent);
 })();
