@@ -1,12 +1,11 @@
 (function () {
-  var angular = require('angular');
-
+  require('./core/core.module');
+  require('./header/header.module');
+  require('./album/album.module');
+  require('./main/main.module');
   angular.module('app', [
     'app.core',
-    'app.album',
-    'app.artist',
-    'app.header',
     'app.main',
-    'app.track'
-  ]);
+    'app.album',
+    'app.header']);
 })();

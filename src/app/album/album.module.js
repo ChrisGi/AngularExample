@@ -1,10 +1,8 @@
 (function () {
-  var angular = require('angular');
-
   var albumComponent = require('./album.component');
 
   angular
-    .module('app.module', [
+    .module('app.album', [
       'app.core',
       'app.header'
     ])

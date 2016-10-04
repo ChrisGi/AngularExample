@@ -1,17 +1,10 @@
 (function () {
-  var angular = require('angular');
-
-  var mainConfig = require('./main.routes.js');
+  var stateConfig = require('./main.routes.js');
   var mainComponent = require('./main.component');
 
-  var main = 'app.main';
-  module.exports = main;
-
   angular
-    .module(main, [
-      'app.core',
-      'app.header'
-    ])
-    .config(mainConfig)
+    .module('app.main', [
+      'app.core'])
+    .config(stateConfig)
     .component('main-page', mainComponent);
 })();

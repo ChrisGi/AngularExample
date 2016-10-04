@@ -5,12 +5,13 @@
 
   /* eslint no-unused-vars: ["error", { "args": "none" }] */
   function StateConfig($stateProvider, $urlRouterProvider) {
-    $urlRouterProvider.otherwise('/');
+    $urlRouterProvider.otherwise('404');
 
     $stateProvider
-      .state('main-el', {
-        url: '/',
-        component: 'main-page'
+      .state('404', {
+        url: '/404',
+        templateUrl: 'app/core/404.html',
+        title: '404'
       });
   }
 })();
