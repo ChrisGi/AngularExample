@@ -6,6 +6,7 @@
   function trackController(tracksservice, $log) {
     var vm = this;
     vm.tracks = [];
+    vm.trackPlayIcon = require('../../assets/img/play-circle-outline.png');
 
     activate();
 
