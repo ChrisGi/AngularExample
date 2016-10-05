@@ -1,6 +1,7 @@
 (function () {
   module.exports = playTrackDirective;
 
+  /* eslint no-unused-vars: ["error", { "args": "none" }] */
   function playTrackDirective($log) {
     var playIcon = require('../../assets/img/play-circle-outline.png');
     var stopIcon = require('../../assets/img/stop-circle-outline.png');
