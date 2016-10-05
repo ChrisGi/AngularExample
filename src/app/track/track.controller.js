@@ -7,6 +7,7 @@
     var vm = this;
     vm.tracks = [];
     vm.play = playTrack;
+    vm.stop = stopPlayingTrack;
 
     activate();
 
@@ -25,6 +26,10 @@
 
     function playTrack() {
       $log.info('Play track %s', vm.trackId);
+    }
+
+    function stopPlayingTrack() {
+      $log.info('Stop playing track %s', vm.trackId);
     }
   }
 })();

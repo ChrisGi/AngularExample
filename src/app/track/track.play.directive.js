@@ -28,6 +28,7 @@
 
       function play() {
         if (isPlayed) {
+          controller.stop();
           scope.icon = playIcon;
           isPlayed = false;
         } else {
