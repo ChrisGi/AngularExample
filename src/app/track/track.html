@@ -1,7 +1,7 @@
 <table class="tracks-table">
-  <tr ng-repeat="track in tr.tracks">
+  <tr ng-repeat="track in tc.tracks">
     <td>
-      <play-button button-icon="{{tr.trackPlayIcon}}"></play-button>
+      <play-button track-id="{{track.id}}"></play-button>
     </td>
     <td><a href="../album/album.html">{{track.name}}</a></td>
     <td><a href="../album/album.html">{{track.album.name}}</a></td>

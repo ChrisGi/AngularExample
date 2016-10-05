@@ -6,7 +6,7 @@
   function trackController(tracksservice, $log) {
     var vm = this;
     vm.tracks = [];
-    vm.trackPlayIcon = require('../../assets/img/play-circle-outline.png');
+    vm.play = playTrack;
 
     activate();
 
@@ -21,6 +21,10 @@
           vm.tracks = data;
           return vm.tracks;
         });
+    }
+
+    function playTrack() {
+      $log.info('Play track %s', vm.trackId);
     }
   }
 })();
