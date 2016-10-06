@@ -42,7 +42,9 @@ module.exports = {
         loaders: [
           'html'
         ]
-      }
+      },
+      { test: /\.png$/,
+        loader: "file-loader" }
     ]
   },
   plugins: [

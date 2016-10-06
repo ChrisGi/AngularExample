@@ -1,5 +1,5 @@
 require('angular');
 (function () {
-  require('./styles.css');
+  require('./assets/css/styles.css');
   require('./app/app.module');
 })();

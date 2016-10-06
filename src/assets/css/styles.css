@@ -187,11 +187,11 @@ a.thumb-l:hover, a.thumb-l:focus {
   background: #333;
   color: #fff;
   text-align: center;
+  border-radius: 20px;
   width: 25px;
   height: 25px;
-  border-radius: 13px;
   font-size: 80%;
-  padding: 5px 0;
+  padding: 1px 1px;
 }
 
 .play-button:hover .icon-background,
