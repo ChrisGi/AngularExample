@@ -13,7 +13,8 @@
       controller: 'TrackController',
       controllerAs: 'vm',
       bindToController: {
-        trackId: '@'
+        trackId: '@',
+        trackPreviewUrl: '@'
       },
       link: link
     };
