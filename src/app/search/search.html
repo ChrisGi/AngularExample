@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Search</title>
+</head>
+<body>
+<div>
+  <nav class="app-navbar initialized minimized">
+    <div class="app-search">
+      <input type="text"
+             placeholder="search..." ng-model="sc.searchValue">
+      <button type="button"
+              class="input-clear"
+              tabindex="-1" ng-click="sc.search(sc.searchValue)">
+        <i class="fa fa-times"></i>
+      </button>
+    </div>
+  </nav>
+</div>
+<header class="page-header">
+  <section class="table-section">
+    <header><h1>Artists</h1></header>
+    <section ng-repeat="artist in sc.searchedData.artists.items">
+
+      <aside>
+        <div class="thumb-s">
+          <img width="250px" height="250px" ng-src="{{ artist.images[0].url }}">
+        </div>
+      </aside>
+
+      <section>
+        <header>
+          <h1>{{artist.name }}</h1>
+          <h2>{{artist.followers.total }} followers</h2>
+        </header>
+      </section>
+
+    </section>
+  </section>
+</header>
+</body>
+</html>
