@@ -5,6 +5,7 @@
   require('./main/main.module');
   require('./artist/artist.module');
   require('./track/track.module');
+  require('./search/search.module');
 
   var stateConfig = require('./app.config');
 
@@ -15,6 +16,7 @@
       'app.main',
       'app.album',
       'app.artist',
-      'app.track'])
+      'app.track',
+      'app.search'])
     .config(stateConfig);
 })();

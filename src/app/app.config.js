@@ -1,11 +1,13 @@
 (function () {
-  module.exports = StateConfig;
+  module.exports = Config;
 
-  StateConfig.$inject = ['$locationProvider', '$stateProvider', '$urlRouterProvider'];
+  Config.$inject = ['$locationProvider', '$stateProvider', '$urlRouterProvider', '$httpProvider'];
 
   /* eslint no-unused-vars: ["error", { "args": "none" }] */
-  function StateConfig($locationProvider, $stateProvider, $urlRouterProvider) {
+  function Config($locationProvider, $stateProvider, $urlRouterProvider, $httpProvider) {
     $locationProvider.html5Mode(true);
     $urlRouterProvider.otherwise('/');
+
+    $httpProvider.interceptors.push('httpinterceptor');
   }
 })();
