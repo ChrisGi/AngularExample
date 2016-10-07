@@ -43,8 +43,10 @@ module.exports = {
           'html'
         ]
       },
-      { test: /\.png$/,
-        loader: "file-loader" }
+      {
+        test: /\.png$/,
+        loader: "url-loader?mimetype=image/png"
+      }
     ]
   },
   plugins: [
