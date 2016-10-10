@@ -17,7 +17,6 @@
         .catch(onError);
 
       function onCompleted(response) {
-        var angular = require('angular');
         return angular.fromJson(response.data).tracks;
       }
 
