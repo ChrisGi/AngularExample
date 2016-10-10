@@ -4,11 +4,11 @@
       <play-button track-id="{{track.id}}" track-preview-url="{{track.preview_url}}"></play-button>
     </td>
     <td><a href="../album/album.html">{{track.name}}</a></td>
-    <td><a href="../album/album.html">{{track.album.name}}</a></td>
+    <td><a href="../album/album.html">{{track.album.name | toUpperCase}}</a></td>
     <td>
       <a href="../artist/artist.html">{{track.artists[0].name}}</a>
     </td>
-    <td>{{track.duration_ms}}</td>
+    <td>{{track.duration_ms | date: 'mm:ss'}}</td>
   </tr>
 
 </table>

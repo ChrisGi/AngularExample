@@ -1,10 +1,10 @@
 (function () {
   module.exports = SearchController;
 
-  SearchController.$inject = ['$log', 'searchservice'];
+  SearchController.$inject = ['$log', 'searchservice', '_'];
 
   /* eslint no-unused-vars: ["error", { "args": "none" }] */
-  function SearchController($log, searchservice) {
+  function SearchController($log, searchservice, _) {
     var vm = this;
     vm.searchValue = '';
     vm.searchedData = [];
@@ -15,8 +15,14 @@
       searchservice.search(value)
         .then(function (response) {
           $log.info(response);
-          vm.searchedData = response.data;
+          vm.searchedData = filterByPopularity(response.data.artists.items);
         });
+    }
+
+    function filterByPopularity(artists) {
+      return _.filter(artists, function (artist) {
+        return artist.popularity > 50;
+      });
     }
   }
 })();
